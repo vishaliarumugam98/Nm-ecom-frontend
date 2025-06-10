@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Register from './Components/Register';
 import Login from './Components/Login';
 import Dashboard from './Components/Dashboard';
+import Home from './Components/Home'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         </nav>
 
         <Routes>
+          <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
