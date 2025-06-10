@@ -16,7 +16,7 @@ export default function Register() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/send-otp', { mobile });
+      const res = await axios.post('https://nm-ecom-backend.onrender.com/api/send-otp', { mobile });
       if (res.data.success) {
         alert(`OTP sent! (check console or response)`);
         setIsOtpSent(true);
@@ -41,7 +41,7 @@ export default function Register() {
     }
 
     try {
-      const res = await axios.post('http://localhost:5000/api/register', {
+      const res = await axios.post('https://nm-ecom-backend.onrender.com/api/register', {
         mobile,
         otp,
         password,
